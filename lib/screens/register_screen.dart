@@ -64,6 +64,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 20,
                       ),
                       CustumTextField(
+                        hide: false,
                         hintText: "Email",
                         onChanged: (data) {
                           email = data;
@@ -73,6 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 10,
                       ),
                       CustumTextField(
+                        hide: true,
                         hintText: "Password",
                         onChanged: (data) {
                           password = data;

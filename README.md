@@ -12,7 +12,7 @@ A mobile chat application built with Flutter and Firebase.
 
 ## Screenshots
 
-
+\\\a\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ## Setup
 

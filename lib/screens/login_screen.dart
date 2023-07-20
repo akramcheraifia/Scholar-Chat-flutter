@@ -60,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 20,
                     ),
                     CustumTextField(
+                        hide: false,
                         hintText: "Email",
                         onChanged: (value) {
                           email = value;
@@ -68,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 10,
                     ),
                     CustumTextField(
+                        hide: true,
                         hintText: "Password",
                         onChanged: (value) {
                           password = value;
@@ -84,7 +86,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           });
                           try {
                             await login();
-                            Navigator.pushNamed(context, ChatScreen.id);
+                            Navigator.pushNamed(context, ChatScreen.id,
+                                arguments: email);
                           } on FirebaseAuthException catch (e) {
                             if (e.code == 'user-not-found') {
                               snackMessage(
